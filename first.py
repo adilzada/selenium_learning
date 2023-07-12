@@ -8,14 +8,12 @@ service = Service("./drivers/chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 driver.get("http://www.youtube.com")
 bashliq=driver.current_url
-driver.maximize_window()
 if "youtube.com" in bashliq:
    print("duz ishledi: "+bashliq)
    driver.get("http://www.amazon.com")
    bashliq=driver.current_url
    if "amazon.com" in bashliq:
       print("duz ishledi: "+bashliq)
-      driver.back()
       
 driver.get("http://www.google.com")
      
